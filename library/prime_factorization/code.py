@@ -1,3 +1,5 @@
+from math import gcd
+from collections import Counter
 def _primality_test(n):
     d = (n - 1) // ((n - 1) & -(n - 1))
     s = ((n - 1) // d).bit_length()
@@ -24,8 +26,6 @@ for i in range(2, N + 1):
             break
         sieve[i * p] = p
 
-from math import gcd
-from collections import Counter
 def prime_factorization(n):
     res = Counter()
     queue = [n]
@@ -64,3 +64,6 @@ def prime_factorization(n):
                 queue.append(n // g)
                 break
     return res
+
+if __name__ == "__main__":
+    print(prime_factorization(60))

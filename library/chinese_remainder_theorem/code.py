@@ -99,3 +99,9 @@ def crt(R, M, MOD=0):
     for t, m in zip(garner(R, M)[::-1], M[::-1]):
         res = (res * m + t) % MOD if MOD else res * m + t
     return res
+
+if __name__ == "__main__":
+    R = [2, 4, 1]
+    M = [3, 5, 7]
+    print(crt(R, M))
+    print(crt(R, M, MOD=11))

@@ -2,14 +2,15 @@
 
 Lists all prime numbers less than or equal to a given number.
 
-## Arguments
+## prime_sieve
+
+### Arguments
 - `n: int`: integer up to which prime numbers are calculated
 
-## Returns
+### Returns
 - `primes, sieve: tuple[list[int], list[int]]`
   - `primes: list[int]`: list of prime numbers
   - `sieve: list[int]`: lowest prime factor of each number
 
-## Complexities
-- Time: $O(n)$
-- Space: $O(n)$
+### Complexities
+- $O(n)$

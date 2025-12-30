@@ -4,10 +4,12 @@ Wrapper function that makes recursive functions iterative using an explicit stac
 
 In the recursive function, `yield` must be used to return the value of the recursive call instead of `return`, even though it doesn't return anything (returns `None`).
 
-## Arguments
+## bootstrap
+
+### Arguments
 
 - `cache: bool`: Whether to enable memoization.
 
-## Returns
+### Returns
 
 - `Callable`: The wrapped function.

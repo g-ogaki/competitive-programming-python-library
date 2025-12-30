@@ -15,7 +15,7 @@ Calculates factorials and inverse factorials modulo a prime number $p$.
 
 ## inv
 
-Returns $n^{-1}$ modulo $p$.
+Returns $n^{-1} \mod p$.
 
 ### Arguments
 
@@ -23,7 +23,7 @@ Returns $n^{-1}$ modulo $p$.
 
 ### Returns
 
-- `int`: $n^{-1}$ modulo $p$
+- `int`: $n^{-1} \mod p$
 
 ### Complexities
 
@@ -36,7 +36,7 @@ $$
 
 ## fact
 
-Returns $n!$ modulo $p$.
+Returns $n! \mod p$.
 
 ### Arguments
 
@@ -44,7 +44,7 @@ Returns $n!$ modulo $p$.
 
 ### Returns
 
-- `int`: $n!$ modulo $p$
+- `int`: $n! \mod p$
 
 ### Complexities
 
@@ -52,7 +52,7 @@ Returns $n!$ modulo $p$.
 
 ## invfact
 
-Returns $(n!)^{-1}$ modulo $p$.
+Returns $(n!)^{-1} \mod p$.
 
 ### Arguments
 
@@ -60,7 +60,7 @@ Returns $(n!)^{-1}$ modulo $p$.
 
 ### Returns
 
-- `int`: $(n!)^{-1}$ modulo $p$
+- `int`: $(n!)^{-1} \mod p$
 
 ### Complexities
 
@@ -68,7 +68,7 @@ Returns $(n!)^{-1}$ modulo $p$.
 
 ## comb
 
-Returns $\dbinom{n}{k} = \dfrac{n!}{k!(n-k)!}$ modulo $p$.
+Returns $\dbinom{n}{k} = \dfrac{n!}{k!(n-k)!} \mod p$.
 
 ### Arguments
 
@@ -77,7 +77,7 @@ Returns $\dbinom{n}{k} = \dfrac{n!}{k!(n-k)!}$ modulo $p$.
 
 ### Returns
 
-- `int`: $\dbinom{n}{k}$ modulo $p$
+- `int`: $\dbinom{n}{k} \mod p$
 
 ### Complexities
 
@@ -85,7 +85,7 @@ Returns $\dbinom{n}{k} = \dfrac{n!}{k!(n-k)!}$ modulo $p$.
 
 ## perm
 
-Returns $P(n, k) = \dfrac{n!}{(n-k)!}$ modulo $p$.
+Returns $P(n, k) = \dfrac{n!}{(n-k)!} \mod p$.
 
 ### Arguments
 
@@ -94,7 +94,7 @@ Returns $P(n, k) = \dfrac{n!}{(n-k)!}$ modulo $p$.
 
 ### Returns
 
-- `int`: $P(n, k)$ modulo $p$
+- `int`: $P(n, k) \mod p$
 
 ### Complexities
 

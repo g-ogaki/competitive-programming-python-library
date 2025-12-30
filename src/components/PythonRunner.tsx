@@ -12,7 +12,7 @@ function PythonEditor({ defaultValue }: { defaultValue: string }) {
 
   return (
     <>
-      <h2 className="text-2xl font-bold p-1 mt-2 border-b-1 border-gray-300">Code Test</h2>
+      <h2 className="text-2xl font-bold py-1 mt-2 border-b-1 border-gray-300">Code Test</h2>
       <form className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
           <CodeMirror

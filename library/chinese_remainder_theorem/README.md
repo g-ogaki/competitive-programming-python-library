@@ -11,16 +11,18 @@ $$
 
 given two arrays $R$ and $M$ of length $n$.
 
-## Arguments
+## crt
+
+### Arguments
 
 - `R: list[int]`: array of remainders
 - `M: list[int]`: array of moduli
 - `MOD: int`: (optional) modulo for the solution
 
-## Returns
+### Returns
 
 - `int`: minimum non-negative solution $x$ (or $x \mod{\text{MOD}}$ if specified) to the system of congruences
 
-## Complexities
+### Complexities
 
 - $O(n \log \text{lcm}(M))$   

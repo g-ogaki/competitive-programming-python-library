@@ -1,13 +1,14 @@
 # Divisors
 
-## Description
 Calculates divisors of a number.
 
-## Arguments
+## divisors
+
+### Arguments
 - `n: int`: integer whose divisors will be listed
 
-## Returns
+### Returns
 - `list[int]`: divisors of `n`
 
-## Time Complexity
-$O(\sqrt{n})$
+### Complexities
+- $O(\sqrt{n})$

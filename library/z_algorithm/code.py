@@ -1,6 +1,4 @@
-# https://deve68.hatenadiary.org/entry/20120201/1328109890
-# https://snuke.hatenablog.com/entry/2014/12/03/214243
-def Z(S):
+def z_algorithm(S):
     n = len(S)
     res = [0] * n
     res[0] = n
@@ -15,3 +13,7 @@ def Z(S):
                 r += 1
             res[i] = r - l
     return res
+
+if __name__ == "__main__":
+    S = "abracadabra"
+    print(z_algorithm(S))

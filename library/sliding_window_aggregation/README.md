@@ -1,11 +1,11 @@
 # Sliding Window Aggregation
 
-Deque-based data structure that holds the product of monoid operations.
+Deque-based data structure that holds the product of semi-group operations.
 
 ## \_\_init\_\_
 
 ### Arguments
-- `dot: Callable[[T, T], T]`: binary operator corresponding to the moniod operator.
+- `dot: Callable[[T, T], T]`: binary operator corresponding to the semi-group operator.
 
 ## \_\_getitem\_\_
 

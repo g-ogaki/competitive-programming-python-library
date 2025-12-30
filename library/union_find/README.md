@@ -7,11 +7,11 @@ Data structure for undirected graphs that supports:
 
 ## \_\_init\_\_
 
-### arguments
+### Arguments
 
 - `n: int`: number of vertices
 
-### complexities
+### Complexities
 
 - Time: $O(n)$
 - Space: $O(n)$
@@ -20,15 +20,15 @@ Data structure for undirected graphs that supports:
 
 Returns the representative of the connected component containing vertex `k`. While rarely used directly, this method can be used to determine if two vertices belong to the same component.
 
-### arguments
+### Arguments
 
 - `k: int`: vertex
 
-### returns
+### Returns
 
 - `int`: representative of the connected component containing vertex `k`
 
-### complexities
+### Complexities
 
 - $\text{amortized } O(\alpha(n))$
 
@@ -36,16 +36,16 @@ Returns the representative of the connected component containing vertex `k`. Whi
 
 Add an edge spanning between vertices `i` and `j`.
 
-### arguments
+### Arguments
 
 - `i: int`: vertex
 - `j: int`: vertex
 
-### returns
+### Returns
 
 - `bool`: `True` if the edge was added (`i` and `j` were not connected), `False` otherwise
 
-### complexities
+### Complexities
 
 - $\text{amortized } O(\alpha(n))$
 
@@ -54,16 +54,16 @@ Add an edge spanning between vertices `i` and `j`.
 
 Returns whether vertices `i` and `j` are connected.
 
-### arguments
+### Arguments
 
 - `i: int`: vertex
 - `j: int`: vertex
 
-### returns
+### Returns
 
 - `bool`: `True` if vertices `i` and `j` are connected, `False` otherwise
 
-### complexities
+### Complexities
 
 - $	\text{amortized } O(\alpha(n))$
 
@@ -71,14 +71,14 @@ Returns whether vertices `i` and `j` are connected.
 
 Returns the size of the connected component containing vertex `k`.
 
-### arguments
+### Arguments
 
 - `k: int`: vertex
 
-### returns
+### Returns
 
 - `int`: size of the connected component containing vertex `k`
 
-### complexities
+### Complexities
 
 - $\text{amortized } O(\alpha(n))$

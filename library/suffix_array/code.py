@@ -1,45 +1,18 @@
-# https://mametter.hatenablog.com/entry/20180130/p1
-# http://web.stanford.edu/class/archive/cs/cs166/cs166.1196/lectures/04/Slides04.pdf
-# https://niuez.hatenablog.com/entry/2019/12/16/203739
-# https://judge.yosupo.jp/submission/1069
-def suffix_array(S):
-    def induced_sort():
+class SuffixArray(object):
+    def __init__(self, S):
+        self.S = S
+        S += '$'
+        self._sa = self._sa_is(list(map(ord, S)))
+        self._lcp = self._lcp_array(S, self._sa)
+    
+    def _sa_is(self, S):
         n = len(S)
-        sa = [-1] * n
-        buf = cum[:]
-        for i in lms[::-1]:
-            v = S[i]
-            buf[v + 1] -= 1
-            sa[buf[v + 1]] = i
-        buf = cum[:]
-        for i in range(n):
-            if sa[i] != -1 and not stype[sa[i] - 1]:
-                v = S[sa[i] - 1]
-                sa[buf[v]] = sa[i] - 1
-                buf[v] += 1
-        buf = cum[:]
-        for i in range(n - 1, -1, -1):
-            if stype[sa[i] - 1]:
-                v = S[sa[i] - 1]
-                buf[v + 1] -= 1
-                sa[buf[v + 1]] = sa[i] - 1
-        return sa
-
-    # assert S[-1] == '$'
-    S = list(map(ord, S))
-    stack = []
-    while True:
-        n = len(S)
-        k = max(S) + 1
-        cum = [0] * (k + 1)
-        for v in S:
-            cum[v + 1] += 1
-        for i in range(k):
-            cum[i + 1] += cum[i]
-
         stype = [True] * n
         for i in range(n - 2, -1, -1):
-            stype[i] = stype[i + 1] if S[i] == S[i + 1] else S[i] < S[i + 1]
+            if S[i] == S[i + 1]:
+                stype[i] = stype[i + 1]
+            else:
+                stype[i] = S[i] < S[i + 1]
 
         lms = []
         lms_map = [-1] * n
@@ -48,11 +21,39 @@ def suffix_array(S):
                 lms_map[i] = len(lms)
                 lms.append(i)
 
+        k = max(S) + 1
+        cum = [0] * (k + 1)
+        for v in S:
+            cum[v + 1] += 1
+        for i in range(k):
+            cum[i + 1] += cum[i]
+
+        def induced_sort():
+            sa = [-1] * n
+            buf = cum[:]
+            for i in lms[::-1]:
+                v = S[i]
+                buf[v + 1] -= 1
+                sa[buf[v + 1]] = i
+            buf = cum[:]
+            for i in range(n):
+                if sa[i] != -1 and not stype[sa[i] - 1]:
+                    v = S[sa[i] - 1]
+                    sa[buf[v]] = sa[i] - 1
+                    buf[v] += 1
+            buf = cum[:]
+            for i in range(n - 1, -1, -1):
+                if stype[sa[i] - 1]:
+                    v = S[sa[i] - 1]
+                    buf[v + 1] -= 1
+                    sa[buf[v + 1]] = sa[i] - 1
+            return sa
+
         sa = induced_sort()
         if len(lms) <= 2:
-            break
-        stack.append((S, stype, cum, lms))
+            return sa
 
+        _lms = lms
         lms = [s for s in sa if lms_map[s] != -1]
         lms_substr = list(range(len(lms)))
         for i in range(2, len(lms)):
@@ -70,28 +71,37 @@ def suffix_array(S):
                     lms_substr[i] = lms_substr[i - 1]
                     break
 
-        S = [0] * len(lms)
+        sub_s = [0] * len(lms)
         for i, v in zip(lms, lms_substr):
-            S[lms_map[i]] = v
+            sub_s[lms_map[i]] = v
+        lms = [_lms[s] for s in self._sa_is(sub_s)]
+        return induced_sort()
 
-    while stack:
-        S, stype, cum, lms = stack.pop()
-        lms = [lms[s] for s in sa]
-        sa = induced_sort()
-    return sa
+    def _lcp_array(self, S, sa):
+        n = len(S)
+        rank = [0] * n
+        for i in range(n):
+            rank[sa[i]] = i
+        lcp = [0] * (n - 1)
+        h = 0
+        for i in range(n - 1):
+            j = sa[rank[i] - 1]
+            if h:
+                h -= 1
+            while j + h < n and i + h < n and S[j + h] == S[i + h]:
+                h += 1
+            lcp[rank[i] - 1] = h
+        return lcp
+    
+    @property
+    def sa(self):
+        return self._sa[1:]
+    
+    @property
+    def lcp(self):
+        return self._lcp[1:]
 
-def lcp_array(S, sa):
-    n = len(S)
-    rank = [0] * n
-    for i in range(n):
-        rank[sa[i]] = i
-    lcp = [0] * (n - 1)
-    h = 0
-    for i in range(n - 1):
-        j = sa[rank[i] - 1]
-        if h:
-            h -= 1
-        while j + h < n and i + h < n and S[j + h] == S[i + h]:
-            h += 1
-        lcp[rank[i] - 1] = h
-    return lcp
+if __name__ == '__main__':
+    sa = SuffixArray("banana")
+    print(sa.sa)
+    print(sa.lcp)

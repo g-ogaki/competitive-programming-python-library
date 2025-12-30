@@ -4,12 +4,12 @@ Data structure to find the lowest common ancestor of two nodes in a tree.
 
 ## \_\_init\_\_
 
-### arguments
+### Arguments
 
 - `G: list[list[int]]`: adjacency list of the tree
 - `root: int = 0`: root of the tree
 
-### complexities
+### Complexities
 
 - Time: $O(n \log n)$
 - Space: $O(n \log n)$
@@ -18,15 +18,15 @@ Data structure to find the lowest common ancestor of two nodes in a tree.
 
 Returns the lowest common ancestor of two nodes `u` and `v`.
 
-### arguments
+### Arguments
 
 - `u: int`: node
 - `v: int`: node
 
-### return value
+### Returns
 
 - `int`: lowest common ancestor of `u` and `v`
 
-### complexities
+### Complexities
 
 - $O(\log n)$

@@ -1,5 +1,3 @@
-# https://scrapbox.io/data-structures/Sliding_Window_Aggregation
-# https://qiita.com/Shirotsume/items/4a2837b5895ef9a7aeb1
 class SWAG(object):
     def __init__(self, dot):
         self._front = []
@@ -66,3 +64,15 @@ class SWAG(object):
             return self._back[-1][1]
         else:
             return self._dot(self._front[-1][1], self._back[-1][1])
+
+if __name__ == "__main__":
+    deque = SWAG(max)
+    deque.appendleft(1)
+    deque.append(2)
+    print(deque.prod())
+    deque.append(3)
+    print(deque)
+    print(deque.prod())
+    deque.pop()
+    print(deque[1])
+    print(deque.prod())

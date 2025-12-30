@@ -43,9 +43,9 @@ Sets the `i`-th element of the array
 ### Complexities
 - $O(\log n)$
 
-## sum
+## prod
 
-Calculates the sum of the subarray $A[l:r]$.
+Calculates the product of the subarray $A[l:r]$.
 
 ### Arguments
 - `l: int`: left index
@@ -59,7 +59,7 @@ Calculates the sum of the subarray $A[l:r]$.
 
 ## bisect_left
 
-Finds the largest $r$ such that sum of subarray $A[l:r]$ is less than $x$.
+Finds the largest $r$ such that product of subarray $A[l:r]$ is less than $x$.
 
 ### Arguments
 - `l: int`: left index

@@ -19,7 +19,7 @@ class SegmentTree(object):
     def __repr__(self):
         return str(self._tree[self._n:])
 
-    def sum(self, l, r):
+    def prod(self, l, r):
         l += self._n
         r += self._n
         lv = rv = self._e
@@ -62,7 +62,7 @@ if __name__ == "__main__":
     from operator import add
     A = [1, 2, 3, 4, 5]
     tree = SegmentTree(A, add, 0)
-    print(tree.sum(1, 3))
+    print(tree.prod(1, 3))
     tree[1] = 10
-    print(tree.sum(1, 3))
+    print(tree.prod(1, 3))
     print(tree.bisect_left(0, 6))

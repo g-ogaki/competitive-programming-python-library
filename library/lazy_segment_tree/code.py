@@ -1,7 +1,3 @@
-# lazy-propagation segment tree
-# http://tsutaj.hatenablog.com/entry/2017/03/30/224339
-# http://beet-aizu.hatenablog.com/entry/2017/12/01/225955
-# http://sugarknri.hatenablog.com/entry/2018/04/16/123016
 class LazySegmentTree(object):
     def __init__(self, A, dot, e, compose, id, act):
         n = len(A)
@@ -29,7 +25,7 @@ class LazySegmentTree(object):
     def act(self, l, r, f):
         l += self._n
         r += self._n
-        # self._descend(l), self._descend(r - 1)  # unnecessary when compose is commutative
+        self._descend(l), self._descend(r - 1)  # omissible when compose is commutative
         _l, _r = l, r
         tree, lazy, act, compose = self._tree, self._lazy, self._act, self._compose
         while l < r:
@@ -43,7 +39,7 @@ class LazySegmentTree(object):
             r >>= 1
         self._ascend(_l), self._ascend(_r - 1)
 
-    def sum(self, l, r):
+    def prod(self, l, r):
         l += self._n
         r += self._n
         self._descend(l), self._descend(r - 1)
@@ -59,3 +55,11 @@ class LazySegmentTree(object):
             l >>= 1
             r >>= 1
         return dot(lv, rv)
+
+if __name__ == "__main__":
+    from operator import add
+    A = [1, 2, 3, 4, 5]
+    tree = LazySegmentTree(A, max, float('-inf'), add, 0, add)
+    print(tree.prod(1, 4))
+    tree.act(0, 3, 10)
+    print(tree.prod(1, 4))

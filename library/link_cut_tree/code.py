@@ -1,4 +1,3 @@
-# https://ferin-tech.hatenablog.com/entry/2020/01/11/012443
 class LinkCutTree(object):
     def __init__(self, A, dot, e, compose, id, act):
         n = len(A)
@@ -7,7 +6,7 @@ class LinkCutTree(object):
         self._parent = [-1] * n
         self._value = A[:]
         self._size = [1] * n
-        self._sum = A[:]
+        self._prod = A[:]
         self._reverse = [False] * n
         self._lazy = [id] * n
         self._dot, self._e, self._compose, self._id, self._act = dot, e, compose, id, act
@@ -17,7 +16,7 @@ class LinkCutTree(object):
         if self._lazy[v] != self._id:
             lazy, compose, act = self._lazy, self._compose, self._act
             self._value[v] = act(lazy[v], self._value[v], 1)
-            self._sum[v] = act(lazy[v], self._sum[v], self._size[v])
+            self._prod[v] = act(lazy[v], self._prod[v], self._size[v])
             if left[v] != -1:
                 lazy[left[v]] = compose(lazy[left[v]], lazy[v])
             if right[v] != -1:
@@ -35,17 +34,17 @@ class LinkCutTree(object):
         return False
     
     def _update(self, v):
-        left, right, size, sum = self._left, self._right, self._size, self._sum
+        left, right, size, prod = self._left, self._right, self._size, self._prod
         size[v] = 1
-        sum[v] = self._value[v]
+        prod[v] = self._value[v]
         if left[v] != -1:
             self._push(left[v])
             size[v] += size[left[v]]
-            sum[v] = self._dot(sum[left[v]], sum[v])
+            prod[v] = self._dot(prod[left[v]], prod[v])
         if right[v] != -1:
             self._push(right[v])
             size[v] += size[right[v]]
-            sum[v] = self._dot(sum[v], sum[right[v]])
+            prod[v] = self._dot(prod[v], prod[right[v]])
     
     def _rotate(self, v, p, d):
         left, right, parent = self._left, self._right, self._parent
@@ -136,7 +135,23 @@ class LinkCutTree(object):
         self._expose(v)
         self._lazy[v] = self._compose(self._lazy[v], f) 
     
-    def sum(self, u, v):
+    def prod(self, u, v):
         self.evert(u)
         self._expose(v)
-        return self._sum[v]
+        return self._prod[v]
+
+if __name__ == "__main__":
+    from operator import add
+
+    A = [0, 1, 2, 3, 4]
+    act = lambda f, x, size: x + f * size
+    lct = LinkCutTree(A, add, 0, add, 0, act)
+    lct.link(0, 1)
+    lct.link(1, 2)
+    print(lct.prod(0, 2))
+    lct.act(0, 1, 10)
+    print(lct.prod(0, 2))
+    print(lct.is_connected(0, 2))
+    print(lct.is_connected(0, 3))
+    lct.cut(2)
+    print(lct.is_connected(0, 2))

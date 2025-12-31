@@ -7,8 +7,8 @@ export default async function Page() {
 
   return (
     <div className="max-w-3xl mx-auto py-10 px-4">
-      <h1 className="text-3xl font-bold mb-6">Compro Python Library</h1>
-      <p className="text-gray-600 mb-6">A collection of algorithms and data structures implemented in Python when the author was into competitive programming.</p>
+      <h1 className="text-3xl font-bold mb-6">Competitive Programming Python Library</h1>
+      <p className="text-gray-600 mb-6">Collection of Python algorithms and data structures developed during my competitive programming studies.</p>
       <h2 className="text-2xl font-bold py-1 my-4">Library</h2>
       <div className="bg-white shadow ring-1 ring-black ring-opacity-5 rounded-lg overflow-hidden my-4">
         <div className="px-6 py-5 border-b border-gray-200 bg-gray-50">
@@ -38,7 +38,7 @@ export default async function Page() {
         <li className="my-1">Library Checker: <a target="_blank" className="text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://judge.yosupo.jp/user/onakasuitacity">onakasuitacity</a></li>
       </ul>
       <h2 className="text-2xl font-bold py-1 my-4">License</h2>
-      <p className="text-gray-600 mb-6">(to be written)</p>
+      <p className="text-gray-600 mb-6">All code is under CC0 1.0 Universal. See <code className="bg-gray-100 text-red-500 rounded px-1.5 py-0.5 mr-0.5">LICENSE</code> in <a href="https://github.com/g-ogaki/compro_python_library" target="_blank" className="text-blue-600 hover:text-blue-800 visited:text-purple-600">GitHub</a> for more details.</p>
     </div>
   );
 }

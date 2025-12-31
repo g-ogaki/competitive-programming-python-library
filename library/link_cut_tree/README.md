@@ -136,4 +136,4 @@ Calculates the product of all vertices on the path between two given nodes `u` a
 
 ### Complexities
 
-- $	\text{amortized } O(\log n)$
+- $\text{amortized } O(\log n)$

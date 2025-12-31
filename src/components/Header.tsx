@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <header className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-800">
       <Link href="/" className="text-xl font-bold hover:opacity-80 transition-opacity">
-        Compro Python Library
+        CP Python Library
       </Link>
       <a
         href="https://github.com/g-ogaki/compro_python_library"
@@ -14,7 +14,7 @@ export const Header = () => {
         aria-label="GitHub Repository"
       >
         <img
-          src="/github-mark-white.png"
+          src="github-mark-white.png"
           alt="GitHub"
           width={24}
           height={24}

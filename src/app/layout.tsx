@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Compro Python Library",
+  title: "Competitive Programming Python Library",
   description: "Documents and Test Run for Algorithms & Data Structures",
 };
 

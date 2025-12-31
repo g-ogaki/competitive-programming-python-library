@@ -1,6 +1,10 @@
-# Compro Python Library
+# Competitive Programming Python Library
 
 A collection of algorithms and data structures for competitive programming in Python.
+
+## Documentation
+
+See [documentation](https://g-ogaki.github.io/compro_python_library/). You can also run them on browsers.
 
 ## Modules
 
@@ -37,3 +41,7 @@ A collection of algorithms and data structures for competitive programming in Py
 
 ### Utility
 - [Recursion Wrapper](library/recursion_wrapper)
+
+## License
+
+[CC0 1.0 Universal](LICENSE)

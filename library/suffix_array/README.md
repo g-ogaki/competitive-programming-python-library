@@ -12,8 +12,8 @@ As of 2025/12/31, this implementation is the [fastest](https://atcoder.jp/contes
 
 ### Complexities
 
-- Time: $O(n)$
-- Space: $O(n)$
+- time: $O(n)$
+- space: $O(n)$
 
 ## sa
 

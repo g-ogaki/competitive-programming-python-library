@@ -14,12 +14,12 @@ Fully persistent data structure for undirected graphs that supports:
 
 ### Complexities
 
-- Time: $O(n)$
-- Space: $O(n)$
+- time: $O(n)$
+- space: $O(n)$
 
 ## root
 
-Returns the representative of the connected component containing vertex `k`. While rarely used directly, this method can be used to determine if two vertices belong to the same component.
+Returns the representative of the connected component containing vertex `k`. Useful to assign connected components values such as potential.
 
 ### Arguments
 

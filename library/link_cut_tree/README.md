@@ -22,8 +22,8 @@ Data structure that extends lazy segment tree for dynamic trees with vertices of
   - This supports aggregations dependent on component size, such as range add/range sum (conceptually extending $M$ to $M \times \mathbb{N}_0$, which is called interval extension).
 
 ### Complexities
-- Time: $O(n)$
-- Space: $O(n)$
+- time: $O(n)$
+- space: $O(n)$
 
 where $n$ represents the length of `A`.
 
@@ -115,7 +115,7 @@ Applies a function $f \in \text{End}(M)$ to all vertices on the path between two
 
 - `u: int`: first node
 - `v: int`: second node
-- `f: U`: function to apply to the path between `u` and `v`
+- `f: U`: endomorphism to apply to the path between `u` and `v`
 
 ### Complexities
 

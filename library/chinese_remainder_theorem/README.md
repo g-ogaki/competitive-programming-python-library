@@ -23,7 +23,7 @@ given two arrays $R$ and $M$ of length $n$.
 
 ### Returns
 
-- `int`: minimum non-negative solution $x$ (or $x \mod{\text{MOD}}$ if specified) to the system of congruences
+- `int`: minimum non-negative solution $x$ (or $x \mod{\text{MOD}}$ if specified) to the system of congruences, or `-1` if no solution exists
 
 ### Complexities
 

@@ -10,14 +10,14 @@ is defined as $C_k = \displaystyle \sum_{i=0}^{k} A_i B_{k-i}$.
 
 ### Arguments
 
-- `f: list[complex]`: The first array of coefficients of the polynomial $f(x)$.
-- `g: list[complex]`: The second array of coefficients of the polynomial $g(x)$.
+- `f: list[complex]`: first array of coefficients of the polynomial $f(x)$
+- `g: list[complex]`: second array of coefficients of the polynomial $g(x)$
 
 ### Returns
 
-- `list[complex]`: The array of coefficients of the polynomial $f(x)g(x)$.
+- `list[complex]`: array of coefficients of the polynomial $f(x)g(x)$
 
 ### Complexities
 
-- Time: $O((n + m) \log (n + m))$
-- Space: $O(n + m)$
+- time: $O((n + m) \log (n + m))$
+- space: $O(n + m)$

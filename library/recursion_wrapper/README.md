@@ -2,14 +2,14 @@
 
 Wrapper function that makes recursive functions iterative using an explicit stack. This improves performance, as recursion in Python is notoriously slow.
 
-In the recursive function, `yield` must be used to return the value of the recursive call instead of `return`, even though it doesn't return anything (returns `None`).
+In the recursive function, `yield` must be used to return the value of the recursive call instead of `return`, even if it doesn't return anything (returns `None`).
 
 ## bootstrap
 
 ### Arguments
 
-- `cache: bool = False`: Whether to enable memoization.
+- `cache: bool = False`: whether to enable memoization
 
 ### Returns
 
-- `Callable`: The wrapped function.
+- `Callable`: the wrapped function

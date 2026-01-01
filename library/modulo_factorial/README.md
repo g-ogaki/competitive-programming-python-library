@@ -10,8 +10,8 @@ Calculates factorials and inverse factorials modulo a prime number $p$.
 
 ### Complexities
 
-- Time: $O(N + \log p)$
-- Space: $O(N)$
+- time: $O(N + \log p)$
+- space: $O(N)$
 
 ## inv
 
@@ -90,7 +90,7 @@ Returns $P(n, k) = \dfrac{n!}{(n-k)!} \mod p$.
 ### Arguments
 
 - `n: int`: number of elements
-- `k: int`: number of elements to choose
+- `k: int`: number of elements to arrange
 
 ### Returns
 

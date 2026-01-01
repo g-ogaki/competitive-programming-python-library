@@ -11,8 +11,8 @@ Data structure for arrays of semi-groups that supports range queries.
 
 ### Complexities
 
-- Time: $O(n \log n)$
-- Space: $O(n \log n)$
+- time: $O(n \log n)$
+- space: $O(n \log n)$
 
 ## prod
 

@@ -13,12 +13,12 @@ Data structure for undirected graphs that supports:
 
 ### Complexities
 
-- Time: $O(n)$
-- Space: $O(n)$
+- time: $O(n)$
+- space: $O(n)$
 
 ## root
 
-Returns the representative of the connected component containing vertex `k`. While rarely used directly, this method can be used to determine if two vertices belong to the same component.
+Returns the representative of the connected component containing vertex `k`. Useful to assign connected components values such as potential.
 
 ### Arguments
 
@@ -43,7 +43,7 @@ Add an edge spanning between vertices `i` and `j`.
 
 ### Returns
 
-- `bool`: `True` if the edge was added (`i` and `j` were not connected), `False` otherwise
+- `bool`: `True` if the edge was essentially added (`i` and `j` were not connected), `False` otherwise
 
 ### Complexities
 

@@ -10,8 +10,8 @@ Calculates the hash of all substrings.
 - `S: str`: string to calculate hashes
 
 ### Complexities
-- Time: $O(n)$
-- Space: $O(n)$
+- time: $O(n)$
+- space: $O(n)$
 
 where $n$ represents the length of the string `S`.
 

@@ -1,6 +1,6 @@
 # Divisors
 
-Calculates divisors of a number.
+Lists divisors of a number.
 
 ## divisors
 

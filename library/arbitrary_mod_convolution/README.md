@@ -10,14 +10,14 @@ is defined as $C_k = \displaystyle \sum_{i=0}^{k} A_i B_{k-i} \mod p$.
 
 ### Arguments
 
-- `f: list[int]`: The first array of coefficients of the polynomial $f(x)$.
-- `g: list[int]`: The second array of coefficients of the polynomial $g(x)$.
+- `f: list[int]`: first array of coefficients of the polynomial $f(x)$
+- `g: list[int]`: second array of coefficients of the polynomial $g(x)$
 
 ### Returns
 
-- `list[int]`: The array of coefficients of the polynomial $f(x)g(x)$ modulo $p$.
+- `list[int]`: array of coefficients of the polynomial $f(x)g(x)$ modulo $p$
 
 ### Complexities
 
-- Time: $O((n + m) \log (n + m))$
-- Space: $O(n + m)$
+- time: $O((n + m) \log (n + m))$
+- space: $O(n + m)$

@@ -11,8 +11,8 @@ Data structure to decompose a tree into at most $O(\log n)$ paths. This is usefu
 
 ### Complexities
 
-- Time: $O(n)$
-- Space: $O(n)$
+- time: $O(n)$
+- space: $O(n)$
 
 where $n$ represents the number of nodes in the tree.
 

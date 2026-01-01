@@ -37,7 +37,7 @@ Finds the minimum cost of the b-flow.
 
 ### Returns
 
-- `int | None`: the minimum cost of the b-flow if the b-flow is feasible, otherwise `None`
+- `int | None`: the minimum cost of the b-flow if the b-flow is feasible, `None` otherwise
 
 ### Complexities
 

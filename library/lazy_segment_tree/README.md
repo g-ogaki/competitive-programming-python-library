@@ -3,7 +3,7 @@
 Data structure for arrays of monoids $(M, \cdot, e)$ and its endomorphism monoid $(\text{End}(M), \circ, \text{id})$ that supports:
 
 - range update: $A[l] \gets f(A[l]), A[l+1] \gets f(A[l+1]), \ldots, A[r-1] \gets f(A[r-1])$
-- range query: Find $A[l] \cdot A[l+1] \cdot \ldots \cdot A[r-1]$
+- range query: find $A[l] \cdot A[l+1] \cdot \ldots \cdot A[r-1]$
 
 ## \_\_init\_\_
 
@@ -16,8 +16,8 @@ Data structure for arrays of monoids $(M, \cdot, e)$ and its endomorphism monoid
 - `act: Callable[[T, U], T]`: binary operator corresponding to $\text{End}(M) \times M \ni (f, x) \mapsto f(x) \in M$
 
 ### Complexities
-- Time: $O(n)$
-- Space: $O(n)$
+- time: $O(n)$
+- space: $O(n)$
 
 where $n$ represents the length of `A`.
 
@@ -26,8 +26,8 @@ where $n$ represents the length of `A`.
 Updates the subarray $A[l:r]$ with the endomorphism $f$.
 
 ### Arguments
-- `l: int`: left index
-- `r: int`: right index
+- `l: int`: left endpoint of the range (inclusive)
+- `r: int`: right endpoint of the range (exclusive)
 - `f: U`: endomorphism to act on the subarray $A[l:r]$
 
 ### Complexities
@@ -38,8 +38,8 @@ Updates the subarray $A[l:r]$ with the endomorphism $f$.
 Calculates the product of the subarray $A[l:r]$.
 
 ### Arguments
-- `l: int`: left index
-- `r: int`: right index
+- `l: int`: left endpoint of the range (inclusive)
+- `r: int`: right endpoint of the range (exclusive)
 
 ### Returns
 - `T`: $A[l] \cdot A[l+1] \cdot \ldots \cdot A[r-1]$

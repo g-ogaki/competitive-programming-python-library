@@ -14,8 +14,8 @@ Data structure for arrays of monoids $(M, \cdot, e)$ that supports:
 - `e: T`: identity element corresponding to $e$
 
 ### Complexities
-- Time: $O(n)$
-- Space: $O(n)$
+- time: $O(n)$
+- space: $O(n)$
 
 where $n$ represents the length of `A`.
 
@@ -48,8 +48,8 @@ Sets the `i`-th element of the array
 Calculates the product of the subarray $A[l:r]$.
 
 ### Arguments
-- `l: int`: left index
-- `r: int`: right index
+- `l: int`: left endpoint of the range (inclusive)
+- `r: int`: right endpoint of the range (exclusive)
 
 ### Returns
 - `T`: $A[l] \cdot A[l+1] \cdot \ldots \cdot A[r-1]$
@@ -62,11 +62,11 @@ Calculates the product of the subarray $A[l:r]$.
 Finds the largest $r$ such that product of subarray $A[l:r]$ is less than $x$.
 
 ### Arguments
-- `l: int`: left index
+- `l: int`: left endpoint of the range (inclusive)
 - `x: T`: threshold
 
 ### Returns
-- `int`: largest $r$ such that $A[l] \cdot A[l+1] \cdot \ldots \cdot A[r-1] < x$.
+- `int`: largest right endpoint $r$ such that $A[l] \cdot A[l+1] \cdot \ldots \cdot A[r-1] < x$ (exclusive).
 
 ### Complexities
 - $O(\log n)$

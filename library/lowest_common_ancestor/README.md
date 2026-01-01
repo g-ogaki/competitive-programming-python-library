@@ -6,13 +6,13 @@ Data structure to find the lowest common ancestor of two nodes in a tree.
 
 ### Arguments
 
-- `G: list[list[int]]`: adjacency list of the tree
+- `G: list[list[int]]`: tree as adjacency list
 - `root: int = 0`: root of the tree
 
 ### Complexities
 
-- Time: $O(n \log n)$
-- Space: $O(n \log n)$
+- time: $O(n \log n)$
+- space: $O(n \log n)$
 
 ## lca
 

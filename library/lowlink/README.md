@@ -17,4 +17,5 @@ Lists all the bridges in an undirected graph (i.e., the edges that, if removed, 
 
 ### Complexities
 
-- $O(V + E)$
+- time: $O(V + E)$
+- space: $O(V + E)$

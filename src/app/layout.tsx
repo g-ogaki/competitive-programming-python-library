@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Competitive Programming Python Library",
   description: "Documents and Test Run for Algorithms & Data Structures",
+  verification: {
+    google: "sVVB5aPtKBKU8gNfzqe0RKGdGBTYIwk8w1t5-6b0mQo",
+  }
 };
 
 export default function RootLayout({

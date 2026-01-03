@@ -4,7 +4,7 @@ A collection of algorithms and data structures for competitive programming in Py
 
 ## Documentation
 
-See [documentation](https://g-ogaki.github.io/compro_python_library/). You can also run them on browsers.
+See [documentation](https://g-ogaki.github.io/competitive-programming-python-library/). You can also run them on browsers.
 
 ## Modules
 

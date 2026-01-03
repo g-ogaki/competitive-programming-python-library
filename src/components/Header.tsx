@@ -9,7 +9,7 @@ export const Header = () => {
         CP Python Library
       </Link>
       <a
-        href="https://github.com/g-ogaki/compro_python_library"
+        href="https://github.com/g-ogaki/competitive-programming-python-library"
         target="_blank"
         rel="noopener noreferrer"
         className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"

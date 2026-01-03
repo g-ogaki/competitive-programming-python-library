@@ -38,7 +38,7 @@ export default async function Page() {
         <li className="my-1">Library Checker: <a target="_blank" className="text-blue-600 hover:text-blue-800 visited:text-purple-600" href="https://judge.yosupo.jp/user/onakasuitacity">onakasuitacity</a></li>
       </ul>
       <h2 className="text-2xl font-bold py-1 my-4">License</h2>
-      <p className="text-gray-600 mb-6">All code is under CC0 1.0 Universal. See <code className="bg-gray-100 text-red-500 rounded px-1.5 py-0.5 mr-0.5">LICENSE</code> in <a href="https://github.com/g-ogaki/compro_python_library" target="_blank" className="text-blue-600 hover:text-blue-800 visited:text-purple-600">GitHub</a> for more details.</p>
+      <p className="text-gray-600 mb-6">All code is under CC0 1.0 Universal. See <code className="bg-gray-100 text-red-500 rounded px-1.5 py-0.5 mr-0.5">LICENSE</code> in <a href="https://github.com/g-ogaki/competitive-programming-python-library" target="_blank" className="text-blue-600 hover:text-blue-800 visited:text-purple-600">GitHub</a> for more details.</p>
     </div>
   );
 }

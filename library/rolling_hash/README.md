@@ -41,7 +41,7 @@ Returns the hash of the substring $S[l:r]$.
 - `tuple[int, int]`: hash of the substring $S[l:r]$
 
 ### Complexities
-- $O(1)$
+- $O(\log n)$
 
 ## \_\_setitem\_\_
 

@@ -10,4 +10,4 @@ Lists all prime factors of a given number.
 - `Counter[int]`: counter where keys are prime factors and values are their exponents
 
 ### Complexities
-- $O(n^{1/4})$
+- $\text{expected } O(n^{1/4})$

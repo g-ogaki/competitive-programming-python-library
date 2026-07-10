@@ -1,14 +1,17 @@
 def divisors(n):
-    S, T = [], []
-    i = 1
-    while i * i <= n:
-        if n % i == 0:
-            S.append(i)
-            T.append(n // i)
-        i += 1
-    if S[-1] == T[-1]:
-        T.pop()
-    T.reverse()
-    return S + T
+    primes = []
+    divisors = [1]
+    p = 2
+    while p * p <= n:
+        if n % p == 0:
+            primes.append((l := len(divisors), p))
+            while n % p == 0:
+                divisors += [d * p for d in divisors[-l:]]
+                n //= p
+        p += 1
+    if n > 1:
+        primes.append((len(divisors), n))
+        divisors += [d * n for d in divisors]
+    return primes, divisors
 
 print(divisors(12))
